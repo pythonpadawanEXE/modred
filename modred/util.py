@@ -332,7 +332,7 @@ def eig_biorthog(array, scale_choice='left'):
     L_evals_conj = L_evals.conj()
 
     # Check that evals are the same
-    if not np.allclose(L_evals, R_evals, rtol=1e-10, atol=1e-12):
+    if not np.allclose(L_evals, R_evals, rtol=1e-9, atol=1e-12):
         raise ValueError('Left and right eigenvalues do not match.')
 
     # Sort the evecs
